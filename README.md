@@ -4,7 +4,7 @@ Tüm kredinbizde mikroservisleri ve ilgili componentler, docker-compose.yml'da t
 
 kredinbizde-service de loglar exception alındıgında kafka ya gönderilerek, log-service ile de kafka dan okunarak mongodb'ye kaydedildi.
 
-Sipariş oluşturulduktan sonra asenkron yapı ile müşteriye mail olarak bilgi gönderilmesi sağlandı.
+ecommerce-microservices : Sipariş oluşturulduktan sonra asenkron yapı ile müşteriye mail olarak bilgi gönderilmesi sağlandı.
 Sipariş oluşturulduktan sonra asenkron yapı ile fatura olusturuldu.
 FeignErrorDecoder class'ı olusturularak diğer microservice'lerde alınan exception ve exception mesajların client microservice de yakalanması sağlandı.
 

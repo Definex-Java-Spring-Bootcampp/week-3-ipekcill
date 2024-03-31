@@ -1,0 +1,33 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: kredinbizde-service
+  rabbitmq:
+    host: rabbitmq
+    username: guest
+    password: guest
+    port: 5672
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    openfeign:
+      client:
+        config:
+          garanti-service:
+            url: http://garanti-service:8081
+          akbank-service:
+            url: http://akbank-service:8085
+
+rabbitmq:
+  exchange: patika.exchange
+  queue: patika.queue
+  routing-key: patika.routingkey
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://kredinbizde-discovery:8761/eureka
